@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/master.css">
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="/t.js-master/t.min.js"></script>
+
+    <title>terminalEffeect</title>
+</head>
+
+<body>
+    <pre id="main" style="text-align: left; align-items: left;">
+    Vijay Saiwal<ins><span id="pow-text">---[Design tuts]</span></ins>
+    <span id="tagline">I am Electronics Engineering student,<ins></ins><br> currently studing at <br>Shri Sant Gajanan Maharaj Collge of Enginnering</span><del></del><del id="pow-trigger"></del>\\</pre>
+    <script>
+
+        $('#main').t({
+            beep: true,
+            caret: '<span style="color:hotpink;">•</span>',
+            typing: function (elm, chr) {
+
+                if (chr.match(/\-trigger/))
+                    $('#pow-txt').show().delay(500).fadeOut(0);
+
+            }
+        });
+    </script>
+
+</body>
+
+</html>
